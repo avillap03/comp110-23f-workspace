@@ -17,7 +17,7 @@ if len(character_chosen) != int(1):
 # part 1 continuation 
 print("Searching for " + character_chosen + " in " + word_chosen)
 
-#required varaible for part 2 - part 3
+# required varaible for part 2 - part 3
 num_instances: int = 0 
 
 # part 2 - checking indices for matches
