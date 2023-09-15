@@ -26,19 +26,19 @@ while idx < len(secret_word):
         result = result + green_box
     # part 3 - checking for correct characters at incorrect positions
     else:
-         # part 3 - variabls - cheking if character is part of secret word
-         guessed_character = False
-         alt_idx: int = 0
-         while not guessed_character and alt_idx < len(secret_word):
-             if guess[idx] == secret_word[alt_idx]:
-                 guessed_character = True
-             alt_idx = alt_idx + 1
-         # part 3 - correct character at incorrect index
-         if guessed_character:
-             result = result + yellow_box
-         # part 3 - incorrect character 
-         else: 
-             result = result + white_box
+        # part 3 - variabls - cheking if character is part of secret word
+        guessed_character = False
+        alt_idx: int = 0
+        while not guessed_character and alt_idx < len(secret_word):
+            if guess[idx] == secret_word[alt_idx]:
+                guessed_character = True
+            alt_idx = alt_idx + 1
+        # part 3 - correct character at incorrect index
+        if guessed_character:
+            result = result + yellow_box
+        # part 3 - incorrect character 
+        else: 
+            result = result + white_box
     idx = idx + 1 
 print(result)
 
