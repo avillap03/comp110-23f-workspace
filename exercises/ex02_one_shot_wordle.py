@@ -8,8 +8,7 @@ guess: str = input(f"What is your {len(secret_word)}-letter guess? ")
 
 # part 1 - prompting for a guess of the correct lenght
 while len(guess) != len(secret_word):
-    new_guess: str = input(f"That was not {len(secret_word)} letters! Try again: ")
-    guess = new_guess
+    guess: str = input(f"That was not {len(secret_word)} letters! Try again: ")
 
 # part 2 - defining name constants for emojis
 white_box: str = "\U00002B1C"
