@@ -1,6 +1,7 @@
-"""EX03 - Structured Wordle"""
+"""EX03 - Structured Wordle."""
 
 __author__ = "730621663"
+
 
 # function to check if a character is contained within a given word
 def contains_char(chosen_word: str, searched_chr: str) -> bool:
@@ -14,6 +15,7 @@ def contains_char(chosen_word: str, searched_chr: str) -> bool:
         idx += 1
     return result
 
+
 # function to create an emoji string representing the similarity between two words
 def emojified(guess: str, secret: str) -> str:
     """Print emoji string that represents similarity between the guess and the secret."""
@@ -24,7 +26,7 @@ def emojified(guess: str, secret: str) -> str:
     yellow_box: str = "\U0001F7E8"
     idx: int = 0
     while idx < len(secret):
-        if guess [idx] == secret [idx]:
+        if guess[idx] == secret[idx]:
             result += green_box
         elif contains_char(secret, guess[idx]) is True:
             result += yellow_box
@@ -33,6 +35,7 @@ def emojified(guess: str, secret: str) -> str:
         idx += 1
     return result 
 
+
 # function to prompt the user for a guess of a specific length
 def input_guess(exp_len: int) -> str:
     """Prompt the user for a guess of the expected length."""
@@ -40,6 +43,7 @@ def input_guess(exp_len: int) -> str:
     while len(chosen_word) != exp_len:
         chosen_word = input(f"That wasn't {exp_len} chars! Try again: ")
     return chosen_word
+
 
 # main function that controls the game loop - pulling together the functions
 def main() -> None: 
@@ -57,7 +61,8 @@ def main() -> None:
             correct_guess = True
         turn += 1   
     if not correct_guess:
-        print (f"X/{max_turns} - Sorry, try again tomorrow!")
+        print(f"X/{max_turns} - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
